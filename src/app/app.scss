@@ -14,3 +14,57 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+.splash-bg {
+    position: relative;
+    background: url('../assets/img/bg-splash.png') no-repeat transparent;
+    background-size: cover;
+    //height: 45%;
+    height: 100%;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: animatedBackground 60s linear infinite;
+  }
+
+  @keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+  }
+
+  .bg {
+      position: relative;
+      background: url('../assets/img/bg.png') no-repeat transparent;
+      background-size: cover;
+      //height: 45%;
+      height: 100%;
+      z-index: 1;
+      background-repeat: repeat-x;
+      //animation: animatedBackground 100s linear infinite;
+    }
+
+  .splash-info {
+    position: relative;
+    z-index: 2;
+    //margin-top: 64px;
+    margin-top: 35%;
+    text-align: center;
+  }
+  .splash-logo {
+    margin: auto;
+    background: url('../assets/img/appicon.png') no-repeat transparent;
+    background-size: 100%;
+    width: 250px;
+    height: 200px;
+    //width: 128px;
+    //height: 128px;
+  }
+
+  .transparent{
+  	background-color: transparent !important;
+  	//color: white;
+  }
+
+  .light{
+  	color: black !important;
+  }

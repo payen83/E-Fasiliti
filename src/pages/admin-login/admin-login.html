@@ -1,0 +1,39 @@
+
+<ion-content class="splash-bg">
+  <div class="splash-info">
+    <div class="splash-logo"></div>
+    <div class="splash-intro light" style="color: white;">
+      ADMIN LOGIN
+    </div>
+  </div>
+  <form (submit)="doLogin()">
+    <ion-list>
+
+      <ion-item class="transparent">
+        <ion-label color="dark" fixed>Email</ion-label>
+        <ion-input class="light" type="email" [(ngModel)]="account.email" name="email"></ion-input>
+      </ion-item>
+
+      
+      <!-- Want to use a Username instead of an Email? Here you go: -->
+
+      <!-- <ion-item class="transparent">
+        <ion-label floating color="light">{{ 'USERNAME' | translate }}</ion-label>
+        <ion-input class="light" type="text" [(ngModel)]="account.username" name="username"></ion-input>
+      </ion-item> -->
+      
+
+      <ion-item class="transparent">
+        <ion-label fixed color="dark">Password</ion-label>
+        <ion-input class="light" type="password" [(ngModel)]="account.password" name="password"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button color="primary" block>Login</button>
+      </div>
+
+      
+    </ion-list>
+  </form>
+  <button ion-button clear color="light" block (click)="back()">Back</button>
+</ion-content>

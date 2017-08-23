@@ -1,0 +1,56 @@
+<!--
+  Generated template for the UploadPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="danger" hideBackButton="true">
+    <ion-title>Masukkan Gambar</ion-title>
+    <ion-buttons end>
+    	<button ion-button clear icon-only (click)="logout()"><ion-icon name="log-out"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg">
+
+<div padding></div>
+
+<ion-grid class="light" padding>
+
+    <ion-row>
+      <ion-col col-sm>
+        <div tappable class="img" (click)="chooseSource('1')" [ngStyle]="{'background-image': 'url(' + image1 +  ')'}"></div>
+      </ion-col>
+      <ion-col col-sm>
+        <div tappable class="img" (click)="chooseSource('2')" [ngStyle]="{'background-image': 'url(' + image2 +  ')'}"></div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-sm>
+        <div tappable class="img" (click)="chooseSource('3')" [ngStyle]="{'background-image': 'url(' + image3 +  ')'}"></div>
+      </ion-col>
+      <ion-col col-sm>
+        <div tappable class="img" (click)="chooseSource('4')" [ngStyle]="{'background-image': 'url(' + image4 +  ')'}"></div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-sm>
+        <div tappable class="img" (click)="chooseSource('5')" [ngStyle]="{'background-image': 'url(' + image5 +  ')'}"></div>
+      </ion-col>
+      <ion-col col-sm>
+        <div tappable class="img" (click)="chooseSource('6')" [ngStyle]="{'background-image': 'url(' + image6 +  ')'}"></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+<div padding>
+<button round ion-button block (click)="nextPage()" icon-right>Seterusnya<ion-icon name="arrow-forward"></ion-icon></button>
+</div>
+
+</ion-content>

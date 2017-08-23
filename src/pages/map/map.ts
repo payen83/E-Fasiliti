@@ -3,7 +3,7 @@ import { NavController, Platform } from 'ionic-angular';
 
 import { GoogleMaps, GoogleMap, GoogleMapsEvent, LatLng, CameraPosition } from '@ionic-native/google-maps';
 
-declare var google: any;
+//declare var google: any;
 
 @Component({
   selector: 'page-map',

@@ -1,24 +1,50 @@
-<ion-header>
+<!-- <ion-header>
 
   <ion-navbar>
     <ion-title>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
   </ion-navbar>
 
-</ion-header>
+</ion-header> -->
 
 
-<ion-content>
+<ion-content class="bg">
+<div class="splash-info">
+    <div class="splash-logo"></div>
+  </div>
   <form (submit)="doSignup()">
     <ion-list>
 
-      <ion-item>
-        <ion-label fixed>{{ 'NAME' | translate }}</ion-label>
-        <ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>
+      <ion-item class="transparent">
+        <ion-label color="dark" fixed>{{ 'NAME' | translate }}</ion-label>
+        <ion-input class="light" type="text" [(ngModel)]="account.name" name="name"></ion-input>
       </ion-item>
 
-      <ion-item>
-        <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label>
-        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
+      <ion-item class="transparent">
+        <ion-label color="dark" fixed>{{ 'EMAIL' | translate }}</ion-label>
+        <ion-input class="light" type="email" [(ngModel)]="account.email" name="email"></ion-input>
+      </ion-item>
+
+      <ion-item class="transparent">
+        <ion-label color="dark" fixed>Phone</ion-label>
+        <ion-input class="light" type="tel" [(ngModel)]="account.phone" name="phone"></ion-input>
+      </ion-item>
+
+      <ion-item class="transparent">
+        <ion-label color="dark" fixed>Alamat</ion-label>
+        <ion-input class="light" type="text" [(ngModel)]="account.address" name="address"></ion-input>
+      </ion-item>
+
+      <ion-item class="transparent">
+        <ion-label color="dark" fixed>Bangunan</ion-label>
+        <ion-input class="light" type="text" [(ngModel)]="account.building" name="phone"></ion-input>
+      </ion-item>
+
+      <ion-item class="transparent">
+        <ion-label color="dark">Role</ion-label>
+          <ion-select [(ngModel)]="account.role" name="role">
+          <ion-option value="user">User</ion-option>
+          <ion-option value="admin">Admin</ion-option>
+        </ion-select>
       </ion-item>
 
       <!--
@@ -30,15 +56,20 @@
       </ion-item>
       -->
 
-      <ion-item>
-        <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
-        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+      <!-- <ion-item class="transparent">
+        <ion-label color="dark" fixed>{{ 'PASSWORD' | translate }}</ion-label>
+        <ion-input class="light" type="password" [(ngModel)]="account.password" name="password"></ion-input>
       </ion-item>
+
+      <ion-item class="transparent">
+        <ion-label color="dark" fixed text-wrap>Confirm Password</ion-label>
+        <ion-input class="light" type="password" [(ngModel)]="confirmPassword" name="confirmPassword"></ion-input>
+      </ion-item> -->
 
       <div padding>
         <button ion-button color="primary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
       </div>
-
     </ion-list>
   </form>
+  <button ion-button clear color="dark" block (click)="back()">Back</button>
 </ion-content>

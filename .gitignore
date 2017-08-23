@@ -29,6 +29,12 @@ plugins/ios.json
 www/
 $RECYCLE.BIN/
 
+*.apk
+*.ipa
+*.jks
+*.txt
+*.zip
+
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate

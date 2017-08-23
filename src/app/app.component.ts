@@ -1,12 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
 import { Platform, Nav, Config } from 'ionic-angular';
-
+import { firebaseConfig } from './firebase.config';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { CardsPage } from '../pages/cards/cards';
 import { ContentPage } from '../pages/content/content';
-import { FirstRunPage } from '../pages/pages';
+//import { FirstRunPage } from '../pages/pages';
 import { ListMasterPage } from '../pages/list-master/list-master';
 import { LoginPage } from '../pages/login/login';
 import { MapPage } from '../pages/map/map';
@@ -18,9 +18,12 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { WelcomePage } from '../pages/welcome/welcome';
 
+//import { LoginPage } from '../pages/login/login';
+
 import { Settings } from '../providers/providers';
 
 import { TranslateService } from '@ngx-translate/core'
+import * as firebase from 'firebase';
 
 @Component({
   template: `<ion-menu [content]="content">
@@ -42,7 +45,8 @@ import { TranslateService } from '@ngx-translate/core'
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage = FirstRunPage;
+  //rootPage = FirstRunPage;
+  rootPage = LoginPage;
 
   @ViewChild(Nav) nav: Nav;
 
@@ -63,6 +67,7 @@ export class MyApp {
 
   constructor(private translate: TranslateService, private platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
     this.initTranslate();
+    firebase.initializeApp(firebaseConfig);
   }
 
   ionViewDidLoad() {

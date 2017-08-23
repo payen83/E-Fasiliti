@@ -1,39 +1,48 @@
-<ion-header>
+<!-- <ion-header>
 
   <ion-navbar>
     <ion-title>{{ 'LOGIN_TITLE' | translate }}</ion-title>
   </ion-navbar>
 
-</ion-header>
+</ion-header> -->
 
 
-<ion-content>
+<ion-content class="splash-bg">
+  <div class="splash-info">
+    <div class="splash-logo"></div>
+  </div>
   <form (submit)="doLogin()">
     <ion-list>
 
-      <ion-item>
-        <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label>
-        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
+      <ion-item class="transparent">
+        <ion-label color="dark" fixed>{{ 'EMAIL' | translate }}</ion-label>
+        <ion-input class="light" type="email" [(ngModel)]="account.email" name="email"></ion-input>
       </ion-item>
 
-      <!--
-      Want to use a Username instead of an Email? Here you go:
+      
+      <!-- Want to use a Username instead of an Email? Here you go: -->
 
-      <ion-item>
-        <ion-label floating>{{ 'USERNAME' | translate }}</ion-label>
-        <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
-      </ion-item>
-      -->
+      <!-- <ion-item class="transparent">
+        <ion-label floating color="light">{{ 'USERNAME' | translate }}</ion-label>
+        <ion-input class="light" type="text" [(ngModel)]="account.username" name="username"></ion-input>
+      </ion-item> -->
+      
 
-      <ion-item>
-        <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
-        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+      <ion-item class="transparent">
+        <ion-label fixed color="dark">{{ 'PASSWORD' | translate }}</ion-label>
+        <ion-input class="light" type="password" [(ngModel)]="account.password" name="password"></ion-input>
       </ion-item>
 
       <div padding>
         <button ion-button color="primary" block>{{ 'LOGIN_BUTTON' | translate }}</button>
       </div>
 
+      
     </ion-list>
   </form>
+  <!-- <button ion-button clear color="light" block (click)="back()">Back</button> -->
+  <div padding>
+    <button ion-button (click)="adminLogin()" clear block color="light">Admin Login</button>
+  </div>
+
 </ion-content>
